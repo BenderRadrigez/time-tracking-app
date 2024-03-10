@@ -13,6 +13,7 @@ export default function MainPage() {
       </div>
       <div className="workPanel">
         <Timer/>
+        
       </div>
     </div>
   );
