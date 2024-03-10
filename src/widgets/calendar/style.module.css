@@ -1,0 +1,13 @@
+.calendar{
+    border-radius: 20px;
+    max-width: 350px;
+    min-width: 190px;
+    width: 35vw;
+}
+@media screen and (max-width: 400px) {
+    .calendar{
+        width: 100%;
+        /* times */
+        display: none;
+    }
+}

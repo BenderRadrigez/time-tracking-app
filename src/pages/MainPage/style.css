@@ -1,0 +1,23 @@
+.mainPage{
+    max-width: 1400px;
+    min-width: 200px;
+    margin: auto;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.workPanel{
+    margin-top: 2vh;
+    background: #fff;
+    border-radius: 20px;
+    /* times */
+    height: 300px;
+}
+
+@media screen and (max-width: 400px) {
+    .head{
+        flex-direction: column;
+    }
+}
