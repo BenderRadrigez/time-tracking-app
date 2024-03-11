@@ -10,10 +10,10 @@
 }
 .workPanel{
     margin-top: 2vh;
-    background: #fff;
     border-radius: 20px;
-    /* times */
-    height: 300px;
+    display: flex;
+    gap: 20px;
+
 }
 
 @media screen and (max-width: 400px) {

@@ -1,0 +1,63 @@
+.ticketsStyle {
+  flex: 0.85;
+  border-radius: 20px;
+  background: #2d87db;
+  padding: 10px;
+  position: relative;
+}
+ul > li {
+  list-style: none;
+}
+.addTicket {
+  margin-top: 1vh;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 20px;
+
+}
+.addTicket:hover, .ticketButton:hover {
+  background: #979797;
+}
+.addTicket:focus {
+  color: aliceblue;
+}
+.modalWindowCreateTicket{
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    top: 55%;
+    padding: 15px;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border: 1px solid #000;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.modalWindowCreateTicket > input, 
+.modalWindowCreateTicket > button{
+    border-radius: 20px;
+    padding: 5px 15px;
+    border: 1px solid gray;
+    width: 80%;
+}
+
+.hide{
+    display: none;
+}
+
+ul>li{
+    margin: 5px;
+}
+
+.ticketButton{
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+}

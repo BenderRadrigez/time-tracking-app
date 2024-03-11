@@ -3,6 +3,8 @@
     color: #fff;
     max-width: 350px;
     text-align: center;
+    flex: 1;
+    border-radius: 20px;
 }
 .currentTime{
     font-size: 1.3rem;
