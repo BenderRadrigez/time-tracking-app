@@ -22,7 +22,7 @@ export default function Timer() {
       setTimer(timer + 1);
     }
 
-    if ((Math.floor(timer) === aboutTicket.time * 60) > 0) {
+    if ((Math.floor(timer) === aboutTicket.time * 60) > 1) {
       play();
     }
   }, 1000);
