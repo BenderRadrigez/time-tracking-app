@@ -1,21 +1,22 @@
-.timer{
-    background: #7fb8ec;
-    color: #fff;
-    max-width: 350px;
-    text-align: center;
-    flex: 1;
-    border-radius: 20px;
+.timer {
+  background: #7fb8ec;
+  color: #fff;
+  max-width: 350px;
+  text-align: center;
+  flex: 1;
+  border-radius: 20px;
 }
-.currentTime{
-    font-size: 1.3rem;
-    margin-bottom: 20px;
+.currentTime {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
 }
-.timerValue{
-    font-size: 2rem;
-    margin-bottom: 20px;
+.timerValue {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
-.startBtn, .clearBtn{
-    padding: 15px;
-    border-radius: 40%;
-    margin: 10px;
+.startBtn,
+.clearBtn {
+  padding: 15px;
+  border-radius: 40%;
+  margin: 10px;
 }

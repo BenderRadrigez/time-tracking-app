@@ -1,7 +1,10 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { removeTicket } from "../../store/slices/ticketsSlice";
-import { clearInfoAboutTicket, getInfoAboutTicket } from "../../store/slices/startTicketSlice";
+import {
+  clearInfoAboutTicket,
+  getInfoAboutTicket,
+} from "../../store/slices/startTicketSlice";
 import { toggleTimerStartStop } from "../../store/slices/timerToggleSlice";
 
 export default function AboutTicketModal({ ticketInfo, setIsHideAbout }) {
@@ -26,7 +29,7 @@ export default function AboutTicketModal({ ticketInfo, setIsHideAbout }) {
       <button
         onClick={() => {
           dispatch(removeTicket(ticketInfo.id));
-          clearInfoAboutTicket()
+          clearInfoAboutTicket();
           setIsHideAbout(true);
         }}
       >

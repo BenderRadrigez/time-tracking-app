@@ -8,13 +8,13 @@ import Tickets from "../../widgets/tickets/tickets";
 export default function MainPage() {
   return (
     <div className="mainPage">
-      <div  className="head">
+      <div className="head">
         <UserInfo />
         <CastomCalendar />
       </div>
       <div className="workPanel">
-        <Timer/>
-        <Tickets/>
+        <Timer />
+        <Tickets />
       </div>
     </div>
   );

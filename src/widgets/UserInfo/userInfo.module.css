@@ -1,19 +1,20 @@
-.userInfo{
-    background: #fff;
-    padding: 20px;
-    border-radius: 20px;
-    flex: 1;
-    text-align: center;
+.userInfo {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  flex: 1;
+  text-align: center;
 }
-.image{
-    max-width: 150px;
-    border-radius: 20%;
-    margin-bottom: 1vh;
+.image {
+  max-width: 150px;
+  border-radius: 20%;
+  margin-bottom: 1vh;
 }
-.logOut{
-    margin-top: 1vh;
-   width: 100%;
-   padding: 10px;
-   border-radius: 20px;
-   border: none;
+.logOut {
+  margin-top: 1vh;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
 }

@@ -15,45 +15,45 @@ ul > li {
   border-radius: 20px;
   border: none;
   margin-bottom: 20px;
-
 }
-.addTicket:hover, .ticketButton:hover {
+.addTicket:hover,
+.ticketButton:hover {
   background: #979797;
 }
 .addTicket:focus {
   color: aliceblue;
 }
-.modalWindowCreateTicket{
-    position: absolute;
-    width: 80%;
-    left: 50%;
-    top: 55%;
-    padding: 15px;
-    transform: translate(-50%, -50%);
-    background: #ffffff;
-    border: 1px solid #000;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 10px;
+.modalWindowCreateTicket {
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  top: 55%;
+  padding: 15px;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border: 1px solid #000;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
 }
-.modalWindowCreateTicket > input, 
-.modalWindowCreateTicket > button{
-    border-radius: 20px;
-    padding: 5px 15px;
-    border: 1px solid gray;
-    width: 80%;
-}
-
-ul>li{
-    margin: 5px;
+.modalWindowCreateTicket > input,
+.modalWindowCreateTicket > button {
+  border-radius: 20px;
+  padding: 5px 15px;
+  border: 1px solid gray;
+  width: 80%;
 }
 
-.ticketButton{
-    width: 100%;
-    border-radius: 20px;
-    padding: 10px;
-    border: none;
+ul > li {
+  margin: 5px;
+}
+
+.ticketButton {
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
 }

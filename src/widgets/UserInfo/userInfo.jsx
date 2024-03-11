@@ -1,7 +1,9 @@
 import React from "react";
 import style from "./userInfo.module.css";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export default function UserInfo() {
+  const navigate = useNavigate();
   return (
     <div className={style.userInfo}>
       <img
@@ -9,8 +11,13 @@ export default function UserInfo() {
         alt="img"
         className={style.image}
       />
-        <h2  className={style.name}>John Doe</h2>
-      <button className={style.logOut}>log out</button>
+      <h2 className={style.name}>John Doe</h2>
+      <button
+        className={style.logOut}
+        onClick={() => navigate("./authorization")}
+      >
+        log out
+      </button>
     </div>
   );
 }

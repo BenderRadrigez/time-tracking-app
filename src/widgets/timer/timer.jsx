@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTimerStartStop } from "../../store/slices/timerToggleSlice";
 import useSound from "use-sound";
@@ -11,6 +11,7 @@ export default function Timer() {
   const { runTimer } = useSelector((state) => state.timerToggle);
   const aboutTicket = useSelector((state) => state.infoAboutTicket);
   const dispatch = useDispatch();
+  const [isPlaySound, setPlaySound] = useState(false);
   const [play] = useSound(signal, { volume: 1 });
 
   // Update time every second
@@ -20,12 +21,18 @@ export default function Timer() {
       setTimer(timer + 1);
     } else if (runTimer && Math.floor(timer) !== aboutTicket.time * 60) {
       setTimer(timer + 1);
-    }
-
-    if ((Math.floor(timer) === aboutTicket.time * 60) > 1) {
-      play();
+    } else if (
+      runTimer &&
+      (Math.floor(timer) === aboutTicket.time * 60) > 0.5
+    ) {
+      setPlaySound(true);
     }
   }, 1000);
+
+  useEffect(() => {
+    play();
+    dispatch(toggleTimerStartStop());
+  }, [isPlaySound]);
 
   return (
     <div className={style.timer}>

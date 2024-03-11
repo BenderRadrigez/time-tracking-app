@@ -10,7 +10,6 @@ const TicketsSlice = createSlice({
     removeTicket(state, action) {
       state.ticketsList = state.ticketsList.filter((el) => {
         return action.payload !== el.id;
-
       });
     },
   },

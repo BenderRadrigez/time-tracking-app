@@ -7,7 +7,11 @@ export default function CastomCalendar() {
   const [calendarValue, setCalendarValue] = useState(new Date());
   return (
     <>
-      <Calendar className={style.calendar} onChange={setCalendarValue} value={calendarValue} />
+      <Calendar
+        className={style.calendar}
+        onChange={setCalendarValue}
+        value={calendarValue}
+      />
     </>
   );
 }

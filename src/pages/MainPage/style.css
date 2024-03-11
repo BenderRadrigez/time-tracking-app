@@ -1,23 +1,22 @@
-.mainPage{
-    max-width: 1400px;
-    min-width: 200px;
-    margin: auto;
+.mainPage {
+  max-width: 1400px;
+  min-width: 200px;
+  margin: auto;
 }
-.head{
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+.head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
-.workPanel{
-    margin-top: 2vh;
-    border-radius: 20px;
-    display: flex;
-    gap: 20px;
-
+.workPanel {
+  margin-top: 2vh;
+  border-radius: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 @media screen and (max-width: 400px) {
-    .head{
-        flex-direction: column;
-    }
+  .head {
+    flex-direction: column;
+  }
 }

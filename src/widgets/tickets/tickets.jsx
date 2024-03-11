@@ -79,7 +79,12 @@ export default function Tickets() {
           </button>
         </div>
       )}
-      {!isHideAbout && <AboutTicketModal ticketInfo={ticketData} setIsHideAbout={setIsHideAbout} />}
+      {!isHideAbout && (
+        <AboutTicketModal
+          ticketInfo={ticketData}
+          setIsHideAbout={setIsHideAbout}
+        />
+      )}
     </div>
   );
 }
