@@ -1,0 +1,22 @@
+.navigate{
+    width: 100%;
+    background: #313943;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    gap: 5px;
+    border-radius: 10px;
+}
+.buttonNav{
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+    background: none;
+    border: none;
+    text-align: center;
+
+}
+
+.isActiveBtn{
+    background:#00D2E3;
+}

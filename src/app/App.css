@@ -1,9 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    background: #1e0563;
-    padding: 10vw;
+  background: #1b232e;
+  padding: 3vw;
+  /* times */
+  padding-top: 3vh;
 }
