@@ -1,7 +1,7 @@
 .ticketsStyle {
   flex: 0.85;
   border-radius: 20px;
-  background: #2d87db;
+  background: linear-gradient(to right, #00D2E3, #670EFD);
   padding: 10px;
   position: relative;
 }

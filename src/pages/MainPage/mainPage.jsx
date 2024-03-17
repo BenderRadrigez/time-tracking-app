@@ -5,6 +5,7 @@ import Timer from "../../widgets/timer/timer";
 import Tickets from "../../widgets/tickets/tickets";
 import Navigate from "../../widgets/navigate/navigate";
 import { useSelector } from "react-redux";
+import CastomCalendar from "../../widgets/calendar/castomCalendar";
 
 export default function MainPage() {
   const { activity, task, profile } = useSelector((state) => state.toggleMenu);
@@ -23,7 +24,11 @@ export default function MainPage() {
           <Tickets />
         </div>
       )}
-      {profile && <div className="workPanel"></div>}
+      {profile && (
+        <div className="workPanel">
+          <CastomCalendar />
+        </div>
+      )}
     </div>
   );
 }
