@@ -1,21 +1,24 @@
 import React, { useState } from "react";
 import "./style.css";
-import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { addUser } from "../../store/slices/requests/setUserData";
 
 export default function AuthorizationPage() {
-  const navigate = useNavigate();
-  const setUserData = useSelector((state) => state.setUserData)
+  const dispatch = useDispatch();
+
   const [isLogin, setIsLogin] = useState(false);
   const [userName, setUserName] = useState("");
   const [userPassword, setUserPassword] = useState("");
   const [userPasswordValid, setUserPasswordValid] = useState("");
-  const userData = { name: "", password: "" };
+  const userLoginData = {
+    login: "",
+    password: "",
+  };
 
+  // не доделана, пока только сравнение паролей, добавить валидацию паролей
   function validPassword() {
     return userPassword === userPasswordValid;
   }
-
 
   return (
     <div className="auth-page">
@@ -38,7 +41,7 @@ export default function AuthorizationPage() {
           <input
             type="password"
             name="password"
-            placeholder="repid Password"
+            placeholder="repeat Password"
             onChange={(e) => setUserPasswordValid(e.target.value)}
           />
         )}
@@ -46,8 +49,15 @@ export default function AuthorizationPage() {
         <button
           className="loginBtn"
           onClick={() => {
-            userData.name = userName;
-            userData.password = userPassword;
+            if (!isLogin) {
+              if (validPassword) {
+                userLoginData.login = userName;
+                userLoginData.password = userPassword;
+                dispatch(addUser(userLoginData));
+              }
+            } else {
+              // вход
+            }
           }}
         >
           {!isLogin ? "Sign Up" : "Login"}
@@ -55,7 +65,12 @@ export default function AuthorizationPage() {
       </div>
 
       <p>or</p>
-      <button className="toggleBtn" onClick={() => setIsLogin(!isLogin)}>
+      <button
+        className="toggleBtn"
+        onClick={() => {
+          setIsLogin(!isLogin);
+        }}
+      >
         {isLogin ? "Sign Up" : "Login"}
       </button>
 

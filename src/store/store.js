@@ -3,7 +3,7 @@ import timerToggleSlice from "./slices/timerToggleSlice";
 import ticketsSlice from "./slices/ticketsSlice";
 import startTicketSlice from "./slices/startTicketSlice";
 import toggleMenuSlice from "./slices/toggleMenuSlice";
-import setUserDataSlice from "./slices/setUserData";
+import userReduser from "./slices/requests/setUserData";
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +11,6 @@ export const store = configureStore({
     tickets: ticketsSlice,
     infoAboutTicket: startTicketSlice,
     toggleMenu: toggleMenuSlice,
-    SetUserData: setUserDataSlice,
+    users: userReduser,
   },
 });
