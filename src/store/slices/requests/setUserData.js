@@ -5,7 +5,7 @@ import { db } from "../../../app/firebase";
 const addUsersToDb = async (userData) => {
   try {
     const newUserRef = await addDoc(collection(db, "users"), userData);
-    console.log(newUserRef.id);
+    localStorage.setItem("id", newUserRef.id);
   } catch (error) {
     throw new Error("Error adding user to database");
   }
@@ -13,8 +13,7 @@ const addUsersToDb = async (userData) => {
 
 export const addUser = createAsyncThunk("users/addUser", async (userData) => {
   try {
-    const responce = await addUsersToDb(userData);
-    return responce;
+    return await addUsersToDb(userData);
   } catch (error) {
     console.log(error);
   }
@@ -41,7 +40,7 @@ const usersSloce = createSlice({
       state.loading = false;
       state.error = action.payload;
     });
-  }
+  },
 });
 
 export default usersSloce.reducer;
