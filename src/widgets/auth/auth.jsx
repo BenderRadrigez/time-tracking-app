@@ -18,7 +18,6 @@ export default function Auth() {
           snapshots.forEach((doc) =>
             dataList.push({ id: doc.id, ...doc.data() })
           );
-          console.log(dataList)
       })
       .catch((e) => {
         console.log("Error getting document:", e);

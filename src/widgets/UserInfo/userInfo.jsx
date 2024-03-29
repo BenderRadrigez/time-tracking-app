@@ -1,9 +1,11 @@
 import React from "react";
 import style from "./userInfo.module.css";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import DefaultButton from "../../shared/defaultButton"
 
 export default function UserInfo() {
   const navigate = useNavigate();
+
   return (
     <div className={style.userInfo}>
       <img
@@ -12,12 +14,11 @@ export default function UserInfo() {
         className={style.image}
       />
       <h2 className={style.name}>John Doe</h2>
-      <button
-        className={style.logOut}
-        onClick={() => navigate("./authorization")}
-      >
-        log out
-      </button>
+      
+      <DefaultButton castomStyle={style.logOut} text={"log out"} onClickFunc={() => {
+          navigate("/");
+          localStorage.clear();
+        }}/>
     </div>
   );
 }

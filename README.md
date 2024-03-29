@@ -28,7 +28,7 @@
 1 post +-
     1 registration +
     2 info -
-2 get -
+2 get +
 строение:
 {
     id: 1,

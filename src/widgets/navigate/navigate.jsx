@@ -6,6 +6,7 @@ import {
   openProfile,
   openTask,
 } from "../../store/slices/toggleMenuSlice";
+import DefaultButton from "../../shared/defaultButton";
 
 export default function Navigate() {
   const dispatch = useDispatch();
@@ -13,24 +14,21 @@ export default function Navigate() {
 
   return (
     <div className={style.navigate}>
-      <button
-        onClick={() => dispatch(openActivity())}
-        className={style.buttonNav + " " + (activity && style.isActiveBtn)}
-      >
-        ACTIVITY
-      </button>
-      <button
-        onClick={() => dispatch(openTask())}
-        className={style.buttonNav + " " + (task && style.isActiveBtn)}
-      >
-        TASK
-      </button>
-      <button
-        onClick={() => dispatch(openProfile())}
-        className={style.buttonNav + " " + (profile && style.isActiveBtn)}
-      >
-        PROFILE
-      </button>
+      <DefaultButton
+        text={"ACTIVITY"}
+        onClickFunc={() => dispatch(openActivity())}
+        castomStyle={style.buttonNav + " " + (activity && style.isActiveBtn)}
+      />
+      <DefaultButton
+        text={"TASK"}
+        onClickFunc={() => dispatch(openTask())}
+        castomStyle={style.buttonNav + " " + (task && style.isActiveBtn)}
+      />
+      <DefaultButton
+        text={"PROFILE"}
+        onClickFunc={() => dispatch(openProfile())}
+        castomStyle={style.buttonNav + " " + (profile && style.isActiveBtn)}
+      />
     </div>
   );
 }
