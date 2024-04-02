@@ -47,7 +47,7 @@ export default function Register() {
             userLoginData.login = userName;
             userLoginData.password = userPassword;
             dispatch(addUser(userLoginData));
-            navigate("/home");
+            navigate("/info");
           }
         }}
       >
