@@ -27,7 +27,6 @@ export default function Auth() {
   function loginBtn(){
     dataList.forEach((el)=>{
         if (el.login === userName && el.password === userPassword){
-          localStorage.setItem('userId', el.id);
           localStorage.setItem('userInfo', JSON.stringify(el));
           return navigate('/home');
         }

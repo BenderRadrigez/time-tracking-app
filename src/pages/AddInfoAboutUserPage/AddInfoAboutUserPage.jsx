@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { doc, updateDoc } from "firebase/firestore";
+import { ref, uploadBytes } from "firebase/storage";
 import DefaultButton from "../../shared/defaultButton";
 import CustomInput from "../../shared/castomInput";
 import defaultUserIcon from "../../assets/images/defaultUserIcon.png";
 import "./style.css";
+import { db, storage } from "../../app/firebase";
+import { useNavigate } from "react-router-dom";
 
 export default function AddInfoAboutUserPage() {
+  const navigate = useNavigate();
   const [imageURL, setImageURL] = useState(defaultUserIcon);
 
   const fileReader = new FileReader();
@@ -20,8 +25,18 @@ export default function AddInfoAboutUserPage() {
   };
 
   useEffect(() => {
+    const userID = localStorage.getItem("id");
     if (userData != null && !isInvalidName) {
-      console.log(userData);
+      const userRef = doc(db, "users", userID);
+      updateDoc(userRef, { userData: userData });
+    }
+    // разбираемся в storage
+    if (userImage != null) {
+      const imageRef = ref(storage, `images/${userID}/icon.jpg`);
+      uploadBytes(imageRef, userImage).then((snap) => {
+        console.log("uploaded a file");
+      });
+      navigate("/home")
     }
   }, [userData]);
 
@@ -31,7 +46,7 @@ export default function AddInfoAboutUserPage() {
       <CustomInput
         onChange={(e) => {
           setUserName(e.target.value);
-          setIsInvalidName(userName.length > 1 ?  false : true);
+          setIsInvalidName(userName.length > 1 ? false : true);
         }}
         value={userName}
         customStyle="input-field"
@@ -76,15 +91,16 @@ export default function AddInfoAboutUserPage() {
         text={"save"}
         castomStyle="save-btn"
         onClickFunc={() => {
-            setUserData({
-              userName: userName,
-              userLastname: userLastname,
-              userBusiness: userBusiness,
-              userImage: userImage,
-            });
+          setUserData({
+            userName: userName,
+            userLastname: userLastname,
+            userBusiness: userBusiness,
+          });
         }}
       />
-      {isInvalidName && <p style={{color: "red"}}>name has been more than 2 characters</p>}
+      {isInvalidName && (
+        <p style={{ color: "red" }}>name has been more than 2 characters</p>
+      )}
     </div>
   );
 }

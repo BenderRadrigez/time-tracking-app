@@ -12,6 +12,7 @@ export default function Register() {
   const userLoginData = {
     login: "",
     password: "",
+    userData : {}
   };
 
   // не доделана, пока только сравнение паролей, добавить валидацию паролей
