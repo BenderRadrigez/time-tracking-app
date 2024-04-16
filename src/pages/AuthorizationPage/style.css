@@ -6,13 +6,10 @@
   align-items: center;
   gap: 1vh;
 }
-<<<<<<< HEAD
-=======
 .logo{
   margin-bottom: 2vh;
 }
 
->>>>>>> add-db-firebase
 .auth {
   width: 100%;
   display: flex;

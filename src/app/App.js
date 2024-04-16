@@ -11,10 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<AuthorizationPage />} />
         <Route path="/home" element={<MainPage />} />
-<<<<<<< HEAD
-=======
         <Route path="/info" element={<AddInfoAboutUserPage />} />
->>>>>>> add-db-firebase
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
