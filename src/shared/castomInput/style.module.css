@@ -1,0 +1,32 @@
+.inptStyle {
+  margin: auto;
+  width: 80%;
+  background: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.inpt {
+  margin-left: 5%;
+  border: none;
+  font-size: 20px;
+  width: 80%;
+  outline: none;
+}
+
+.inptFile {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.saveImg {
+  text-align: center;
+  width: 100%;
+}

@@ -9,26 +9,17 @@ import CastomCalendar from "../../widgets/calendar/castomCalendar";
 
 export default function MainPage() {
   const { activity, task, profile } = useSelector((state) => state.toggleMenu);
+
   return (
     <div className="mainPage">
       <UserInfo />
       <Navigate />
-
-      {activity && (
-        <div className="workPanel">
-          <Timer />
-        </div>
-      )}
-      {task && (
-        <div className="workPanel">
-          <Tickets />
-        </div>
-      )}
-      {profile && (
-        <div className="workPanel">
-          <CastomCalendar />
-        </div>
-      )}
+      
+      <div className="workPanel">
+        {activity && <Timer />}
+        {task && <Tickets />}
+        {profile && <CastomCalendar />}
+      </div>
     </div>
   );
 }

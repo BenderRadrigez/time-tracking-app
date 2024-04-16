@@ -77,6 +77,13 @@ export default function Tickets() {
           >
             add
           </button>
+          <button
+            onClick={() => {
+              setIsHideModal(true);
+            }}
+          >
+            close
+          </button>
         </div>
       )}
       {!isHideAbout && (

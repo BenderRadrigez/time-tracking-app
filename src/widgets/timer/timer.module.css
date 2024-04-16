@@ -3,8 +3,11 @@
   color: #fff;
   max-width: 350px;
   text-align: center;
-  flex: 1;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
 }
 .currentTime {
   font-size: 1.3rem;
@@ -19,4 +22,10 @@
   padding: 15px;
   border-radius: 40%;
   margin: 10px;
+}
+.timerImgs,
+.hours,
+.minutes,
+.seconds{
+  display: flex;
 }

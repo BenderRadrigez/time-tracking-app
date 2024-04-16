@@ -13,3 +13,27 @@
     flex-direction: column;
   }
 }
+
+.file-uploader{
+  background: #00D2E3;
+  width: 50%;
+  margin: auto;
+  margin-top: 3vh;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.file-uploader:hover{
+  background: yellow;
+}
+
+.save-imgInpt{
+  cursor: pointer;
+  opacity: 0;
+  position : absolute;
+  height: 100%;
+  width: 100%;
+}

@@ -14,7 +14,9 @@
     background: none;
     border: none;
     text-align: center;
-
+}
+.buttonNav:hover{
+    background: yellow;
 }
 
 .isActiveBtn{
