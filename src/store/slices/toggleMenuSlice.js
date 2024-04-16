@@ -3,9 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const toogleMenuSlice = createSlice({
   name: "toogleMenu",
   initialState: {
-    activity: false,
+    activity: true,
     task: false,
-    profile: true,
+    profile: false,
   },
   reducers: {
     openActivity(state) {
